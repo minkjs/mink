@@ -26,7 +26,6 @@ Mink is a powerful command-line tool used to produce written content for the web
 	+ Markdown inside Markdown with: `<!-- mink | path/to/bar.md -->`
 	+ Fetch external content:  `<!-- mink | https://en.wikipedia.org/wiki/Cat -->`
 	+ Get the first 100 Fibonacci numbers from a plugin:  `<!-- mink | fibonacci | {n: 100} -->`
-	+ Handlebars templating
 - Plugins
 	+ Write local project modules with simple plugin architecture
 	+ Publish your module to the NPM Registry
