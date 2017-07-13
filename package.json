@@ -10,7 +10,7 @@
   "scripts": {
     "test": "xo && yarn run cover",
     "cover": "./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha ./lib/*.js ./lib/**/*.js && echo \"View report: coverage/lcov-report/index.html\"",
-    "coveralls": "npm run cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
+    "coveralls": "yarn run cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
     "preinstall": "rm -rf node_modules/app || true",
     "postinstall": "ln -s ../ node_modules/app"
   },
