@@ -85,7 +85,7 @@
         }
       },
       {
-        "files": "Minkconf.spec.js",
+        "files": "**/Minkconf.spec.js",
         "rules": {
           "unicorn/filename-case": 0
         }
