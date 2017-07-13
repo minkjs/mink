@@ -46,3 +46,4 @@ Mink serves Markdown content from anywhere in your filesystem. You can install M
 ```shell
 yarn global add mink
 ```
+
