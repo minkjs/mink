@@ -1,5 +1,5 @@
 const Minkconf = {
-	routes: [
+	plugins: [
 		{
 			path: '**/*.md',
 			module: 'lib/modules/markdown/mink-markdown'
