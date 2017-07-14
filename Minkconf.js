@@ -2,20 +2,20 @@ const Minkconf = {
 	plugins: [
 		{
 			path: '**/*.md',
-			module: 'lib/modules/markdown/mink-markdown'
+			module: 'lib/plugins/markdown/mink-markdown'
 		},
 		{
 			path: '**/',
-			module: 'lib/modules/dir/mink-dir',
-			template: 'lib/modules/dir/mink-dir.html'
+			module: 'lib/plugins/dir/mink-dir',
+			template: 'lib/plugins/dir/mink-dir.html'
 		},
 		{
-			module: 'lib/modules/fibonacci/mink-fibonacci',
+			module: 'lib/plugins/fibonacci/mink-fibonacci',
 			tag: 'fibonacci'
 		},
 		{
 			path: '**/*',
-			module: 'lib/modules/file/mink-file'
+			module: 'lib/plugins/file/mink-file'
 		}
 	]
 }
