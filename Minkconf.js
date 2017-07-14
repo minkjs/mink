@@ -10,6 +10,10 @@ const Minkconf = {
 			template: 'lib/modules/dir/mink-dir.html'
 		},
 		{
+			module: 'lib/modules/fibonacci/mink-fibonacci',
+			tag: 'fibonacci'
+		},
+		{
 			path: '**/*',
 			module: 'lib/modules/file/mink-file'
 		}
