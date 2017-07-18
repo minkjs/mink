@@ -35,6 +35,7 @@
   "homepage": "https://github.com/f1lt3r/mink#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "doxdox": "^2.0.3",
     "fs-extra": "^2.1.2",
     "handlebars": "^4.0.10",
     "meow": "^3.7.0",
