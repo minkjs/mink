@@ -9,6 +9,8 @@
   },
   "scripts": {
     "test": "xo && yarn run cover",
+    "unit": "./node_modules/.bin/_mocha ./lib/*.js ./lib/**/*.js",
+    "watch-unit": "mocha --reporter min --growl ./lib/*.js ./lib/**/*.js --watch --watch-extensions .html",
     "cover": "./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha ./lib/*.js ./lib/**/*.js && echo \"View report: coverage/lcov-report/index.html\"",
     "coveralls": "yarn run cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
     "precommit": "yarn test",
@@ -38,6 +40,7 @@
     "doxdox": "^2.0.3",
     "fs-extra": "^2.1.2",
     "git-hooks": "^1.1.10",
+    "growl": "^1.10.4",
     "handlebars": "^4.0.11",
     "markdown": "^0.5.0",
     "meow": "^3.7.0",
@@ -69,6 +72,7 @@
       "__dirname"
     ],
     "rules": {
+      "no-console": 1,
       "import/no-extraneous-dependencies": 0,
       "import/no-dynamic-require": 0,
       "import/no-unresolved": 0,
@@ -98,6 +102,7 @@
       {
         "files": "**/*.spec.js",
         "rules": {
+          "no-console": 1,
           "max-nested-callbacks": [
             "error",
             5
