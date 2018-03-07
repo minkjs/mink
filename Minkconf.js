@@ -2,11 +2,11 @@ const Minkconf = {
 	plugins: [
 		{
 			path: '**/*.md',
-			module: 'lib/plugins/markdown/mink-markdown'
+			module: './lib/plugins/markdown/mink-markdown'
 		},
 		{
 			path: '**/*.html',
-			module: 'lib/plugins/html/mink-html'
+			module: './lib/plugins/html/mink-html'
 		},
 		{
 			path: '**/',
@@ -14,9 +14,13 @@ const Minkconf = {
 			template: 'lib/plugins/dir/mink-dir.html'
 		},
 		{
-			module: 'lib/plugins/fibonacci/mink-fibonacci',
+			module: './lib/plugins/fibonacci/mink-fibonacci',
 			tag: 'fibonacci'
 		},
+		// {
+		// 	path: '**/*.less',
+		// 	module: 'less'
+		// },
 
 		// Catch-all for "other" content
 		// Note: mink-file uses pipes files to your browser
