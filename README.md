@@ -1,6 +1,7 @@
 # Mink
 
-Remix your Markdown (Pre-Release)
+> Remix your Markdown with this live Markdown server and static-site generator
+
 
 [![Build Status](https://travis-ci.org/F1LT3R/mink.svg?branch=master)](https://travis-ci.org/F1LT3R/mink)
 [![Coverage Status](https://coveralls.io/repos/github/F1LT3R/mink/badge.svg?branch=master)](https://coveralls.io/github/F1LT3R/mink?branch=master)
@@ -9,9 +10,124 @@ Remix your Markdown (Pre-Release)
 [![Known Vulnerabilities](https://snyk.io/test/github/f1lt3r/mink/badge.svg)](https://snyk.io/test/github/f1lt3r/mink)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-## About
+## About Mink
 
-Mink is a powerful command-line tool used to produce written content for the web. Mink is designed from the ground up for technical writting, blogging and software documentation. Mink lets you slice, dice and remix structured Markdown content in realtime. Mink serves your content while you create, then  exports your flattened project as part of your build pipeline.
+Mink is a tool 
+
+## How Mink Works
+
+Mink launches an HTTP server from a local directory.
+
+```shell
+cd ~/repos/my-site
+mink
+```
+
+
+- Mink renders your Markdown files as HTTP on the fly.
+- Mink watches your files for changes, and re-renders them to all of your devices simultaneously.
+- Mink exports your project to static files that can be uploaded to a server.
+
+### Mixed-Mode Markdown
+
+Mink uses Mixed-Mode Markdown, combining Handlebars templates with Markdown syntax.
+
+```html
+{{#each article}}
+<article>
+    <h2>{{article.title}}</h2>
+</article>
+{{/each}}
+```
+
+### Include Syntax
+
+Mink adds includes syntax to your HTML and Markdown files.
+
+```
+<!-- File: index.html -->
+<head>
+	<!-- mink: styles.less -->
+</head>
+<body>
+	<!-- mink: home-page.md -->
+</body>
+```
+
+### Re-Usable Project Configuration
+
+Mink lets your configure your projects with `Minkconf.js`.
+
+```javascript
+// File: Minkconf.js
+
+const Minkconf = {
+	plugins: {
+		markdown: {
+			path: '**/*.md'
+			handler: 'mink-markdown'
+		}
+	},
+	watch: {
+		'**/*.md'
+	},
+	export: {
+		'**/*.md'
+	}
+}
+
+module.exports = Minkconf
+```
+
+### Custom Handlers
+
+Mink lets you rapidly build custom handlers for http routes.
+
+
+```javascript
+// File: Minkconf.js
+
+const typescript = require('typescript')
+
+const Minkconf = {
+	plugins: {
+		typescript: {
+			path: '**/*.ts'
+			handler: $file => ts.transpileModule($file.contents).outputText
+		}
+	}
+}
+
+module.exports = Minkconf
+```
+
+
+
+## Why Mink Exists
+
+1. Software Documentation
+1. Blog and Static-Site Creation
+1. Pull-Mode Task Runner
+
+Mink is a powerful command-line tool used to produce written content for the web. Mink is designed from the ground up for technical writting, blogging and software documentation. Mink lets you slice, dice and remix structured Markdown content in realtime. Mink serves your content while you create, then exports your flattened project as part of your build pipeline.
+
+
+
+## Getting Started
+
+Installation:
+
+```shell
+yarn --global add mink
+```
+
+Launch server from the current directory:
+
+```shell
+mink
+```
+
+
 
 ## Features
 

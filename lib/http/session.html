@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div id="proxyFrame"></div>
+</body>
+	<script type="text/javascript">
+		const loc = window.location
+		const proxyPort = 8002
+		const proxyUrl = loc.protocol + '//' + loc.hostname + ':' + proxyPort + '/' + loc.hash
+
+		console.log(proxyUrl)
+
+		const iframe = document.createElement('iframe')
+		// iframe.setAttribute('sandbox', 'allow-cross-origin allow-scripts')
+		iframe.src = proxyUrl
+		proxyFrame.appendChild(iframe)
+		console.log(iframe)
+
+		// window.addEventListener("message", receiveMessage, false);
+	</script>
+</html>

@@ -13,14 +13,6 @@ const Minkconf = {
 			module: 'lib/plugins/dir/mink-dir',
 			template: 'lib/plugins/dir/mink-dir.html'
 		},
-		{
-			module: './lib/plugins/fibonacci/mink-fibonacci',
-			tag: 'fibonacci'
-		},
-		// {
-		// 	path: '**/*.less',
-		// 	module: 'less'
-		// },
 
 		// Catch-all for "other" content
 		// Note: mink-file uses pipes files to your browser
