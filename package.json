@@ -9,8 +9,9 @@
   },
   "scripts": {
     "test": "xo && yarn run cover",
-    "unit": "ava ./lib/*.test.js ./lib/**/*.test.js",
-    "cover": "nyc --reporter=lcov --reporter=html ava lib/*.test.js lib/**/*.test.js --verbose && echo \"Coverage report: coverage/lcov-report/index.html\"",
+    "unit": "ava ./lib/*.test.js /lib/**/*.test.js",
+    "cover": "nyc ava lib/*.test.js lib/**/*.test.js && yarn run echo-html-cov-link",
+    "echo-html-cov-link": "echo \"Coverage report: coverage/lcov-report/index.html\"",
     "coveralls": "yarn run cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
     "precommit": "yarn test",
     "preinstall": "rm -rf node_modules/app || true",
