@@ -2,7 +2,6 @@
 
 > Remix your Markdown with this live Markdown server and static-site generator
 
-
 [![Build Status](https://travis-ci.com/minkjs/mink.svg?token=qoHuwCLMzrVokCyqzWgj&branch=master)](https://travis-ci.com/minkjs/mink)
 [![Coverage Status](https://coveralls.io/repos/github/minkjs/mink/badge.svg?branch=master&t=Z79OeA)](https://coveralls.io/github/minkjs/mink?branch=master)
 [![Npm Version](https://img.shields.io/npm/v/mink.svg)](https://www.npmjs.com/package/mink)
@@ -12,7 +11,12 @@
 
 ## About Mink
 
-Mink is a tool 
+Use cases
+
+- Web Server with live Markdown preview
+- Static-site generator
+- Software documentation tool
+- Website generator
 
 ## How Mink Works
 
