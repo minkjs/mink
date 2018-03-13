@@ -102,13 +102,9 @@
         }
       },
       {
-        "files": "**/*.spec.js",
+        "files": "**/*.test.js",
         "rules": {
-          "no-console": 0,
-          "max-nested-callbacks": [
-            "error",
-            5
-          ]
+          "no-console": 0
         }
       }
     ]
