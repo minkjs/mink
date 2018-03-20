@@ -15,7 +15,10 @@ module.exports = () => {
 
 	const config = {
 		MinkconfRoot,
-		log: log(cli)
+		log: log(cli),
+		MinkconfData: {
+			foo: 'bar'
+		}
 	}
 
 	return config
