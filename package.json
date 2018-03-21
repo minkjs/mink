@@ -9,9 +9,9 @@
 	},
 	"scripts": {
 		"test": "xo && yarn run cover",
-		"unit": "ava ./lib/plugins/**/*.test.js ./lib/*.test.js ./lib/**/*.test.js ./examples/**/*.test.js --verbose",
-		"watch": "ava --watch ./lib/plugins/**/*.test.js ./lib/*.test.js /lib/**/*.test.js ./examples/**/*.test.js",
-		"cover": "nyc --reporter=lcov --reporter=html --reporter=text ava ./lib/plugins/**/*.test.js lib/*.test.js lib/**/*.test.js ./examples/**/*.test.js && yarn run show-cov-link",
+		"unit": "ava ./lib/plugins/**/*.test.js ./lib/*.test.js ./lib/**/*.test.js ./doc/examples/**/*.test.js --verbose",
+		"watch": "ava --watch ./lib/plugins/**/*.test.js ./lib/*.test.js /lib/**/*.test.js ./doc/examples/**/*.test.js",
+		"cover": "nyc --reporter=lcov --reporter=html --reporter=text ava ./lib/plugins/**/*.test.js lib/*.test.js lib/**/*.test.js ./doc/examples/**/*.test.js && yarn run show-cov-link",
 		"show-cov-link": "node lib/misc/show-cov-link",
 		"coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v",
 		"precommit": "yarn test"

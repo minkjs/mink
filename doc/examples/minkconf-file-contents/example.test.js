@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import test from 'ava'
 
-import mink from '../../lib/mink'
+import mink from '../../../lib/mink'
 
 test.cb('minkconf file contents', t => {
 	const expectedPath = path.join(__dirname, 'expected.txt')
