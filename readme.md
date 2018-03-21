@@ -87,7 +87,6 @@ module.exports = Minkconf
 
 Mink lets you rapidly build custom handlers for http routes.
 
-
 ```javascript
 // File: Minkconf.js
 
