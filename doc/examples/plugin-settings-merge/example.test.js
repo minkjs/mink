@@ -1,7 +1,7 @@
 import path from 'path'
 import test from 'ava'
 
-import mink from '../../lib/mink'
+import mink from '../../../lib/mink'
 
 test.cb('plugin settings merge', t => {
 	const dir = path.join(__dirname, '.minkconf.js')
