@@ -1,25 +1,9 @@
-const ts = require('typescript')
-
 const Minkconf = {
-	data: {
-		foo: 'bar'
-	},
 	plugins: {
 		markdown: {
 			path: '**/*.md',
 			handler: './lib/plugins/markdown/mink-markdown'
 		},
-		typescript: {
-			path: '**/*.ts',
-			handler: ($uri, $res, $data, $file) => {
-				// Log all the things
-				// console.log($uri)
-				// console.log($data)
-				// console.log($file)
-				const transpiled = ts.transpileModule(String($file.contents), {}).outputText
-				$res.end(`uri: ${$uri}, data: ${$data}, ts: ${transpiled}`)
-			}
-		}
 
 		// Save for later
 		// {

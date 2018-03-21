@@ -1,7 +1,6 @@
 const Minkconf = {
-	data: {},
 	plugins: {
-		text: {
+		whatevs: {
 			path: '**/*.txt',
 			handler: (file, res) => {
 				res.end(file.contents)

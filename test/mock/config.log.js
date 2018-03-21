@@ -1,8 +1,8 @@
 const path = require('path')
 
-const log = require('../lib/core/log')
+const log = require('../../lib/core/log')
 
-const MinkconfRoot = path.resolve(path.join(__dirname, '../'))
+const MinkconfRoot = path.resolve(path.join(__dirname, '../', '../'))
 
 module.exports = () => {
 	const cli = {
